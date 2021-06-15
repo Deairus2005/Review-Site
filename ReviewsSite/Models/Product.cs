@@ -11,8 +11,22 @@ namespace ReviewsSite.Models
         public string Name { get; set; }
         public string Image { get; set; }
         public string Category { get; set; }
-        public string Review { get; set; }
+        public Review Review { get; set; }
 
+        public Product(int id, string name, string image, string category)
+        {
+            ID = id;
+            Name = name;
+            Image = image;
+            Category = category;
+        }
+        public void AddReview()
+        {
+            //Fix this stuff
+            //Review myReview = new Review(42, "","");
+
+            //myReview = Review;
+        }
 
     }
 }
