@@ -7,7 +7,7 @@ namespace ReviewsSite.Models
 {
     public class Product
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
         public string Category { get; set; }
@@ -15,7 +15,7 @@ namespace ReviewsSite.Models
 
         public Product(int id, string name, string image, string category)
         {
-            ID = id;
+            Id = id;
             Name = name;
             Image = image;
             Category = category;
