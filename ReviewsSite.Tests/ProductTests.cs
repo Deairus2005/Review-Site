@@ -10,7 +10,7 @@ namespace ReviewsSite.Tests
 {
     public class ProductTests
     {
-        Product sut;
+        Product sut = new Product(47, "", "", "");
 
 
         [Fact]
@@ -46,7 +46,9 @@ namespace ReviewsSite.Tests
         [Fact]
         public void AddReview_Adds_Review_To_Product()
         {
-            Review myReview = new Review(42, "","");
+            sut = new Product(53, "", "", "Personal Hygiene");
+
+            Review myReview = new Review(42, "Hello!", "");
 
             sut.AddReview(myReview);
 

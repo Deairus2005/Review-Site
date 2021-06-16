@@ -20,12 +20,9 @@ namespace ReviewsSite.Models
             Image = image;
             Category = category;
         }
-        public void AddReview()
+        public void AddReview(Review myReview)
         {
-            //Fix this stuff
-            //Review myReview = new Review(42, "","");
-
-            //myReview = Review;
+            Review = myReview;
         }
 
     }
