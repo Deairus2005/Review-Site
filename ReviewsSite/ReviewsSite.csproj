@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp5</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+    <Folder Include="wwwroot\Styles\" />
+  </ItemGroup>
+
 </Project>

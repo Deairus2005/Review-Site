@@ -20,5 +20,9 @@ namespace ReviewsSite.Controllers
         {
             return View(repo.GetAll());
         }
+        public ViewResult Details(int id)
+        {
+            return View(repo.GetById(id));
+        }
     }
 }
