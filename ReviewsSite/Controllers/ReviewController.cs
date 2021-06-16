@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ReviewsSite.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Controllers
 {
-    public class HomeController : Controller
+    public class ReviewController : Controller
     {
-        public ViewResult Index()
+        public ViewResult Review()
         {
             return View();
         }

@@ -9,12 +9,12 @@ using Xunit;
 
 namespace ReviewsSite.Tests
 {
-    public class HomeControllerTests
+    public class ProductControllerTests
     {
         [Fact]
         public void Index_Returns_A_View()
         {
-            var underTest = new HomeController();
+            var underTest = new ProductController();
 
             var result = underTest.Index();
 
