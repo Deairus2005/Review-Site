@@ -26,7 +26,7 @@ namespace ReviewsSite.Repositories
 
         public Review GetById(int id)
         {
-            return reviewList.Where(r => r.Id == id).FirstOrDefault();
+            return reviewList.Where(r => r.ProductId == id).FirstOrDefault();
         }
     }
 }

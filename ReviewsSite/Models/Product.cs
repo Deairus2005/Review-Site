@@ -11,7 +11,7 @@ namespace ReviewsSite.Models
         public string Name { get; set; }
         public string Image { get; set; }
         public string Category { get; set; }
-        public Review Review { get; set; }
+        public List<Review> Reviews { get; set; }
 
         public Product(int id, string name, string image, string category)
         {
@@ -19,10 +19,11 @@ namespace ReviewsSite.Models
             Name = name;
             Image = image;
             Category = category;
+            Reviews = new List<Review>();
         }
         public void AddReview(Review myReview)
         {
-            Review = myReview;
+            Reviews.Add(myReview);
         }
 
     }
