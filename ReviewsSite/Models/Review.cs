@@ -14,8 +14,9 @@ namespace ReviewsSite.Models
         public string Name { get; set; }
         public string ReviewContent { get; set; }
 
-        public Review(int rating, int productId, string name, string reviewContent)
+        public Review(int id, int productId, string name, string reviewContent, int rating)
         {
+            Id = id;
             ProductId = productId;
             Rating = rating;
             Name = name;

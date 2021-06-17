@@ -8,25 +8,24 @@ namespace ReviewsSite.Repositories
 {
     public class ReviewRepository : IRepository<Review>
     {
-        public List<Review> reviewList;
+        public StoreContext db;
 
-        public ReviewRepository()
+        public ReviewRepository(StoreContext db)
         {
-            reviewList = new List<Review>()
-            {
-                new Review(5, 11, "Hand Soap", "\nGentle on the hands and smells pretty!"),
-                new Review(2, 55, "Deodorant", "\nLeft me stanky and moist!  Terrible.")
-            };
+           
+            
+                this.db = db;
+            
         }
 
         public IEnumerable<Review> GetAll()
         {
-            return reviewList;
+            return db.Reviews.ToList();
         }
 
         public Review GetById(int id)
         {
-            return reviewList.Where(r => r.ProductId == id).FirstOrDefault();
+            return db.Reviews.Where(r => r.ProductId == id).FirstOrDefault();
         }
     }
 }
