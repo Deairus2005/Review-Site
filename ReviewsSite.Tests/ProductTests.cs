@@ -18,7 +18,7 @@ namespace ReviewsSite.Tests
         {
             sut = new Product(47, "", "", "");
 
-            Assert.Equal(47, sut.ID);
+            Assert.Equal(47, sut.Id);
 
         }
 
