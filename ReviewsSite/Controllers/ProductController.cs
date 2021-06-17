@@ -22,7 +22,10 @@ namespace ReviewsSite.Controllers
         }
         public ViewResult Details(int id)
         {
-            return View(repo.GetById(id));
+            Product myProduct = repo.GetById(id);
+            ReviewRepository reviewRepo = new ReviewRepository();
+            myProduct.AddReview(reviewRepo.GetById(id));
+            return View(myProduct);
         }
     }
 }
