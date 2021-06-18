@@ -11,7 +11,7 @@ namespace ReviewsSite.Models
         public string Name { get; set; }
         public string Image { get; set; }
         public string Category { get; set; }
-        public List<Review> Reviews { get; set; }
+        public virtual List<Review> Reviews { get; set; }
 
         public Product(int id, string name, string image, string category)
         {

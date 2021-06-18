@@ -11,15 +11,19 @@ namespace ReviewsSite.Models
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
         public int Rating { get; set; }
-        public string Name { get; set; }
+        public string AuthorName { get; set; }
         public string ReviewContent { get; set; }
 
-        public Review(int id, int productId, string name, string reviewContent, int rating)
+        public Review()
+        {
+
+        }
+        public Review(int id, int productId, string authorName, string reviewContent, int rating)
         {
             Id = id;
             ProductId = productId;
             Rating = rating;
-            Name = name;
+            AuthorName = authorName;
             ReviewContent = reviewContent;
         }
     }

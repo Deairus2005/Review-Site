@@ -13,7 +13,7 @@ namespace ReviewsSite
         public DbSet<Review> Reviews { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb; Database=UniversityDB_062021; Trusted_Connection=True";
+            var connectionString = "Server=(localdb)\\mssqllocaldb; Database=StoreDB_062021; Trusted_Connection=True";
             optionsBuilder.UseSqlServer(connectionString).UseLazyLoadingProxies();
             base.OnConfiguring(optionsBuilder);
 
@@ -28,11 +28,11 @@ namespace ReviewsSite
                 new Product(5, "Cotton Swabs", "cottonSwabs.png", "Personal Hygiene")
                 );
             modelBuilder.Entity<Review>().HasData(
-               new Review(1, 1, "Hand Soap", "Gentle on the hands and smells pretty!",3 ),
-               new Review(2, 2, "Deodorant", "Left me stanky and moist!  Terrible.", 3),
-               new Review(3, 3, "Shampoo", "Gentle on the hands and smells pretty!", 3),
-               new Review(4, 4, "Facial Cleanser", "Left me stanky and moist!  Terrible.", 3),
-               new Review(5, 5, "Cotton Swabs", "Gentle on the hands and smells pretty!", 3)
+               new Review(1, 1, "John Doe", "Gentle on the hands and smells pretty!",3 ),
+               new Review(2, 2, "Anon.", "Left me stanky and moist!  Terrible.", 3),
+               new Review(3, 3, "Nina P.", "Gentle on the hands and smells pretty!", 3),
+               new Review(4, 4, "Hugh Jass", "Left me stanky and moist!  Terrible.", 3),
+               new Review(5, 5, "Dolla Bilz", "Gentle on the hands and smells pretty!", 3)
              );
         }
         

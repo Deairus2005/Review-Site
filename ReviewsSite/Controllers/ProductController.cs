@@ -10,22 +10,21 @@ namespace ReviewsSite.Controllers
 {
     public class ProductController : Controller
     {
-        public ProductRepository repo;
-        public ProductController()
+        public IRepository<Product> productRepo;
+        public ProductController(IRepository<Product> productRepo)
         {
-            repo = new ProductRepository();
+            this.productRepo = productRepo;
         }
 
         public ViewResult Index()
         {
-            return View(repo.GetAll());
+            return View(productRepo.GetAll());
         }
         public ViewResult Details(int id)
         {
-            Product myProduct = repo.GetById(id);
-            ReviewRepository reviewRepo = new ReviewRepository();
-            myProduct.AddReview(reviewRepo.GetById(id));
-            return View(myProduct);
+            Product myProduct = productRepo.GetById(id);
+           
+            return View(productRepo.GetById(id));
         }
     }
 }
