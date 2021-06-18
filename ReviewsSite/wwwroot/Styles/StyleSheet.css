@@ -1,0 +1,22 @@
+﻿body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    display: block;
+    background-color: darkseagreen;
+}
+
+ul li {
+    display: inline;
+    padding: 16px;
+}
+
+li a:hover{color: black;}
+
+.productList {
+    display: none;
+}
