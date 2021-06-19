@@ -13,11 +13,7 @@ namespace ReviewsSite.Repositories
 
         public ProductRepository(StoreContext db)
         {
-           
-            {
-                this.db = db;
-            }
-
+            this.db = db;
         }
 
         public IEnumerable<Product> GetAll()
