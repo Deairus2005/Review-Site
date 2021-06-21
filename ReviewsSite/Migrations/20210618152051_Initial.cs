@@ -48,11 +48,11 @@ namespace ReviewsSite.Migrations
                 columns: new[] { "Id", "Category", "Image", "Name" },
                 values: new object[,]
                 {
-                    { 1, "Personal Hygiene", "handSoap.png", "Hand Soap" },
-                    { 2, "Personal Hygiene", "deodorant.png", "Deodorant" },
-                    { 3, "Health Beauty", "shampoo.png", "Shampoo" },
-                    { 4, "Health Beauty", "facialCleanser.png", "Facial Cleanser" },
-                    { 5, "Personal Hygiene", "cottonSwabs.png", "Cotton Swabs" }
+                    { 1, "Personal Hygiene", "~/Images/handSoap.png", "Hand Soap" },
+                    { 2, "Personal Hygiene", "~/Images/deodorant.png", "Deodorant" },
+                    { 3, "Health Beauty", "~/Images/shampoo.png", "Shampoo" },
+                    { 4, "Health Beauty", "~/Images/facialCleanser.png", "Facial Cleanser" },
+                    { 5, "Personal Hygiene", "~/Images/cottonSwabs.png", "Cotton Swabs" }
                 });
 
             migrationBuilder.InsertData(

@@ -1,22 +1,36 @@
 ﻿body {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     text-align: center;
     margin: 2rem;
 }
 
+h1 a {text-decoration: inherit;}
+
+h1 a:hover {color:seagreen;}
+
 ul {
     list-style-type: none;
-    display: block;
-    background-color: darkseagreen;
+    display: inline-block;
 }
 
 ul li {
-    display: inline;
-    padding: 16px;
+    float: left;
+    font-size: large;
 }
 
-li a:hover{color: black;}
+li a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: inherit;
+}
+
+li a:hover {color: seagreen;}
 
 .productList {
     display: none;
+}
+
+.productImage{
+    height: 300px;
+    width: 300px;
 }

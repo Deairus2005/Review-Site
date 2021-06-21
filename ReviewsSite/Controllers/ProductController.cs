@@ -24,7 +24,7 @@ namespace ReviewsSite.Controllers
         {
             Product myProduct = productRepo.GetById(id);
            
-            return View(productRepo.GetById(id));
+            return View(myProduct);
         }
     }
 }

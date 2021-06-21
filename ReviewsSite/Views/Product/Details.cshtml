@@ -1,30 +1,17 @@
 ﻿@model ReviewsSite.Models.Product
 
-@*@{ Layout = null; }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Product</title>
-</head>
-<body>*@
-    <h2><a href="/Product/">All Products</a></h2>
-    <hr />
-    <p>@Model.Id</p>
-    <p>@Model.Name</p>
-    <p>@Model.Image</p>
-    <p>@Model.Category</p>
-    <p>Reviews</p>
-    <div>
-        @foreach (var review in Model.Reviews)
-        {
-            <div><a href="/Review/">@review.AuthorName</a></div>
-            <div><a href="/Review/">@review.Rating</a></div>
-            <div><a href="/Review/">@review.ReviewContent</a></div>
-        }
-    </div> 
-    
-@*</body>
-</html>*@
+<h2><a href="/Product/">All Products</a></h2>
+<hr />
+<p>@Model.Id</p>
+<p>@Model.Name</p>
+<p><img class="productImage" src="@Url.Content(Model.Image)" /></p>
+<p>@Model.Category</p>
+<p>Reviews</p>
+<div>
+    @foreach (var review in Model.Reviews)
+    {
+        <div><a href="/Review/">@review.AuthorName</a></div>
+        <div><a href="/Review/">@review.Rating</a></div>
+        <div><a href="/Review/">@review.ReviewContent</a></div>
+    }
+</div> 
