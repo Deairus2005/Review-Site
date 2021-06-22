@@ -19,9 +19,19 @@ namespace ReviewsSite.Controllers
         {
             return View(reviewRepo.GetAll());
         }
+        
         public IActionResult Create(int id)
         {
+            ViewBag.Product = new List<Product>() { reviewRepo.GetProductById(id) };
             return View(new Review() { ProductId = id });
+        }
+
+        [HttpPost]
+        public IActionResult Create(Review model)
+        {
+            //model.Id = 0;
+            reviewRepo.Create(model);
+            return  RedirectToAction("Details", "Product", new {id = model.ProductId });
         }
     }
 }

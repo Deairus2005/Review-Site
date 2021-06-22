@@ -31,8 +31,8 @@ namespace ReviewsSite
                new Review(1, 1, "John Doe", "Gentle on the hands and smells pretty!",3 ),
                new Review(2, 2, "Anon.", "Left me stanky and moist!  Terrible.", 3),
                new Review(3, 3, "Nina P.", "Gentle on the hands and smells pretty!", 3),
-               new Review(4, 4, "Hugh Jass", "Left me stanky and moist!  Terrible.", 3),
-               new Review(5, 5, "Dolla Bilz", "Gentle on the hands and smells pretty!", 3)
+               new Review(4, 4, "Hugh Jackman", "Left me stanky and moist!  Terrible.", 3),
+               new Review(5, 5, "Daniel Bruce", "Gentle on the hands and smells pretty!", 3)
              );
         }
         

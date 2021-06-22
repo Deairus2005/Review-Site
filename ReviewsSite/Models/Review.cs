@@ -18,7 +18,7 @@ namespace ReviewsSite.Models
 
         public Review()
         {
-
+        
         }
         public Review(int id, int productId, string authorName, string reviewContent, int rating)
         {
