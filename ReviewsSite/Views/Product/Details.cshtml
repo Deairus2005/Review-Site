@@ -8,6 +8,7 @@
 <p>@Model.Category</p>
 <p>Reviews</p>
 <div>
+    <div><a href="/Review/Create">Create a new review</a></div>
     @foreach (var review in Model.Reviews)
     {
         <div><a href="/Review/">@review.AuthorName</a></div>

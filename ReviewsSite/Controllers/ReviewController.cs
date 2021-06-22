@@ -19,5 +19,9 @@ namespace ReviewsSite.Controllers
         {
             return View(reviewRepo.GetAll());
         }
+        public IActionResult Create(int id)
+        {
+            return View(new Review() { ProductId = id });
+        }
     }
 }
