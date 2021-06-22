@@ -4,6 +4,7 @@
     <h1>Product List</h1>
     <hr />
     <div>
+        
         @foreach (var product in Model)
         {
             <section><a href="/Product/Details/@product.Id">@product.Name</a></section>
