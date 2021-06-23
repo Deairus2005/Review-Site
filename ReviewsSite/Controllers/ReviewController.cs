@@ -29,9 +29,24 @@ namespace ReviewsSite.Controllers
         [HttpPost]
         public IActionResult Create(Review model)
         {
-            //model.Id = 0;
             reviewRepo.Create(model);
-            return  RedirectToAction("Details", "Product", new {id = model.ProductId });
+            return RedirectToAction("Details", "Product", new {id = model.ProductId });
         }
+
+        public IActionResult Update(int id)
+        {
+            Review review = reviewRepo.GetById(id);
+            return View(review);
+        }
+
+        [HttpPost]
+        public IActionResult Update(Review model)
+        {
+            reviewRepo.Update(model);
+            ViewBag.ResultMessage = "This review was successfully updated";
+            return RedirectToAction("Details", "Product", new { id = model.ProductId });
+        }
+
+
     }
 }

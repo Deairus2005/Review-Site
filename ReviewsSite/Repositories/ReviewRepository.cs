@@ -12,10 +12,7 @@ namespace ReviewsSite.Repositories
 
         public ReviewRepository(StoreContext db)
         {
-           
-            
-                this.db = db;
-            
+                this.db = db;            
         }
 
         public void Create(Review obj)
@@ -56,7 +53,8 @@ namespace ReviewsSite.Repositories
 
         public void Update(Review obj)
         {
-            throw new NotImplementedException();
+            db.Reviews.Update(obj);
+            db.SaveChanges();
         }
     }
 }
