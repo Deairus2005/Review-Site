@@ -33,7 +33,7 @@ namespace ReviewsSite.Repositories
 
         public Review GetById(int id)
         {
-            return db.Reviews.Where(r => r.ProductId == id).FirstOrDefault();
+            return db.Reviews.Where(r => r.Id == id).FirstOrDefault();
         }
 
         public Product GetProductById(int id)
