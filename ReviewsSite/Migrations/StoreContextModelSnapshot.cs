@@ -129,7 +129,7 @@ namespace ReviewsSite.Migrations
                         new
                         {
                             Id = 4,
-                            AuthorName = "Hugh Jass",
+                            AuthorName = "Hugh Jackman",
                             ProductId = 4,
                             Rating = 3,
                             ReviewContent = "Left me stanky and moist!  Terrible."
@@ -137,7 +137,7 @@ namespace ReviewsSite.Migrations
                         new
                         {
                             Id = 5,
-                            AuthorName = "Dolla Bilz",
+                            AuthorName = "Daniel Bruce",
                             ProductId = 5,
                             Rating = 3,
                             ReviewContent = "Gentle on the hands and smells pretty!"
