@@ -21,9 +21,10 @@ namespace ReviewsSite.Repositories
             db.SaveChanges();
         }
 
-        public void Delete(Review obj)
+        public void Delete(Review model)
         {
-            throw new NotImplementedException();
+            db.Reviews.Remove(model);
+            db.SaveChanges();
         }
 
         public IEnumerable<Review> GetAll()

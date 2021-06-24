@@ -13,6 +13,7 @@
     {
         <div><a href="/Review/">@review.AuthorName</a></div>
         <div><a href="/Review/">@review.Rating</a></div>
-        <div><a href="/Review/">@review.ReviewContent</a><a href="/Review/Update/@review.Id">Update Review</a></div>
+        <div><a href="/Review/">@review.ReviewContent</a> <button type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></div>
+        
     }
 </div> 

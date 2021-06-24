@@ -43,7 +43,24 @@ namespace ReviewsSite.Controllers
         public IActionResult Update(Review model)
         {
             reviewRepo.Update(model);
-            ViewBag.ResultMessage = "This review was successfully updated";
+            
+            //Not used for now
+            //ViewBag.ResultMessage = "This review was successfully updated";
+            
+            return RedirectToAction("Details", "Product", new { id = model.ProductId });
+        }
+
+        public IActionResult Delete(int id)
+        {
+            Review review = reviewRepo.GetById(id);
+            return View(review);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Review model)
+        {
+            reviewRepo.Delete(model);
+
             return RedirectToAction("Details", "Product", new { id = model.ProductId });
         }
 
