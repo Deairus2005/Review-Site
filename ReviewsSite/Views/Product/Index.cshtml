@@ -1,13 +1,1 @@
-﻿@model IEnumerable<ReviewsSite.Models.Product>
-
-<body>
-    <h1>Product List</h1>
-    <hr />
-    <div>
-        
-        @foreach (var product in Model)
-        {
-            <section><a href="/Product/Details/@product.Id">@product.Name</a></section>
-        }
-    </div>
-</body>
+﻿@model IEnumerable<ReviewsSite.Models.Product><link rel="StyleSheet" href="/Styles/StyleSheet.css" /><h1>Product List</h1><hr /><div>    @foreach (var product in Model)    {        <section><a href="/Product/Details/@product.Id">@product.Name</a></section>    }</div>
