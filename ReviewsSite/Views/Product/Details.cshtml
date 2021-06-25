@@ -2,7 +2,6 @@
 
 <h2><a href="/Product/">All Products</a></h2>
 <hr />
-<p>@Model.Id</p>
 <p>@Model.Name</p>
 <p><img class="productImage" src="@Url.Content(Model.Image)" /></p>
 <p>@Model.Category</p>
@@ -11,9 +10,9 @@
     <div><a href="/Review/Create/@Model.Id">Create a new review</a></div>
     @foreach (var review in Model.Reviews)
     {
-        <div><a href="/Review/">@review.AuthorName</a></div>
-        <div><a href="/Review/">@review.Rating</a></div>
-        <div><a href="/Review/">@review.ReviewContent</a> <button type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></div>
+        <div>@review.AuthorName</div>
+        <div>@review.Rating</div>
+        <div>@review.ReviewContent <button type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></div>
         
     }
 </div> 

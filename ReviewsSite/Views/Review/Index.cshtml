@@ -1,10 +1,1 @@
-﻿@model IEnumerable<ReviewsSite.Models.Review>
-
-    <h1>Reviews</h1>
-    <hr />
-    <ul>
-        @foreach (var review in Model)
-        {
-            <li><a href="/Review/Index/@review.Id">@review.ProductId</a></li>
-        }
-    </ul>
+﻿@model IEnumerable<ReviewsSite.Models.Review><h1>Reviews</h1><hr /><ul>    @foreach (var review in Model)    {        <li><a href="/Review/Index/@review.Id">@review.ProductId</a></li>    }</ul>
