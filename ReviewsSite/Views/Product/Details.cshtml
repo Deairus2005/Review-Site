@@ -11,7 +11,15 @@
     @foreach (var review in Model.Reviews)
     {
         <div>@review.AuthorName</div>
-        <div>@review.Rating</div>
+        @for(int i = 1; i <= 5; i++) { 
+            if(i <= @review.Rating) {
+            <div class="fa fa-star checked"></div>
+            }
+            else
+            {
+                <div class="fa fa-star"></div>
+            }
+        }
         <div>@review.ReviewContent <button type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></div>
         
     }
