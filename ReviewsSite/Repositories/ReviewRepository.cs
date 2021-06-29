@@ -37,6 +37,11 @@ namespace ReviewsSite.Repositories
             return db.Reviews.Where(r => r.Id == id).FirstOrDefault();
         }
 
+        public Product GetByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public Product GetProductById(int id)
         {
             return db.Products.Find(id);

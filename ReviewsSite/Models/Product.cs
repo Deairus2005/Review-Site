@@ -17,6 +17,11 @@ namespace ReviewsSite.Models
         public string Category { get; set; }
         public virtual List<Review> Reviews { get; set; }
 
+        public Product()
+        {
+
+        }
+
         public Product(int id, string name, string image, string category)
         {
             Id = id;

@@ -18,12 +18,16 @@ namespace ReviewsSite.Repositories
 
         public void Create(Product obj)
         {
-            throw new NotImplementedException();
+            db.Products.Add(obj);
+
+            db.SaveChanges();
         }
 
         public void Delete(Product obj)
         {
-            throw new NotImplementedException();
+            db.Products.Remove(obj);
+
+            db.SaveChanges();
         }
 
         public IEnumerable<Product> GetAll()
@@ -34,6 +38,11 @@ namespace ReviewsSite.Repositories
         public Product GetById(int id)
         {
             return db.Products.Where(p => p.Id == id).FirstOrDefault();
+        }
+
+        public Product GetByName(string name)
+        {
+            return db.Products.Where(p => p.Name == name).FirstOrDefault();
         }
 
         public Product GetProductById(int id)
@@ -53,7 +62,9 @@ namespace ReviewsSite.Repositories
 
         public void Update(Product obj)
         {
-            throw new NotImplementedException();
+            db.Products.Update(obj);
+
+            db.SaveChanges();
         }
     }
 }

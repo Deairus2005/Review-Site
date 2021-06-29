@@ -11,5 +11,6 @@ namespace ReviewsSite.Extensions
         IEnumerable<Product> GetProducts();
         IEnumerable<Review> GetReviews();
         Product GetProductById(int id);
+        Product GetByName(string name);
     }
 }
