@@ -24,7 +24,10 @@ li a {
     text-decoration: inherit;
 }
 
-li a:hover {color: seagreen;}
+a:hover, li a:hover {
+    color: seagreen;
+    font-weight: bold;
+}
 
 .productList {
     display: none;
@@ -41,3 +44,18 @@ a {
 }
 
 .checked {color: orange;}
+
+.reviewTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.reviewTable th {font-weight: bold;}
+
+    .reviewTable td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .innerTr:nth-child(even){background-color:#dddddd;}
