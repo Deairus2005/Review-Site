@@ -17,7 +17,7 @@ namespace ReviewsSite.Controllers
         }
         public IActionResult Index()
         {
-            return View(reviewRepo.GetAll());
+            return View(reviewRepo.GetAll().OrderBy(r => r.ProductId));
         }
         
         public IActionResult Create(int id)
