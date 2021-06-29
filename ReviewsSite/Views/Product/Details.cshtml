@@ -3,7 +3,7 @@
 <h2><a href="/Product/">All Products</a></h2>
 <hr />
 <p>@Model.Name</p>
-<p><img class="productImage" src="@Url.Content(Model.Image)" /></p>
+<div><img class="productImage" src="@Url.Content(Model.Image)" /></div>
 <p>@Model.Category</p>
 <div>
     <button type="button" onclick="location.href='/Product/Update/@Model.Id'">Edit</button> |
@@ -14,7 +14,8 @@
     <div><a href="/Review/Create/@Model.Id">Create a new review</a></div>
     @foreach (var review in Model.Reviews)
     {
-        <div>@review.AuthorName</div>
+        <p>@review.AuthorName</p>
+        <br />
         @for (int i = 1; i <= 5; i++)
         {
             if (i <= @review.Rating)
@@ -27,7 +28,8 @@
             }
             
         }
-        <div>@review.ReviewContent <button type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></div>
+        <br />
+        <p>@review.ReviewContent <button type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></p>
 
     }
 </div> 
