@@ -41,14 +41,14 @@ namespace ReviewsSite.Controllers
         {
             //Product existingProduct = productRepo.GetByName(model.Name);
 
-            //if (existingProduct == null)
+            //if (existingProduct == null && !String.IsNullOrEmpty(model.Name))
             //{
             //    productRepo.Create(model);
 
             //    return RedirectToAction("Index");
             //}
 
-            //ViewBag.ResultMessage = "That Product already exists.";
+            //ViewBag.ResultMessage = "Please Enter A Name That Does Not Already Exist And Is Not Blank.";
 
             //return View(model);
 
