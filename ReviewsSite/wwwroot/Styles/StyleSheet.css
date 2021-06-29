@@ -21,6 +21,12 @@ h4 a {
     background-color: rgb(198 193 193 / 0.6);
 }
 
+p {
+    display:inline-block;
+    color: #711d0a;
+    background-color: rgb(198 193 193 / 0.6);
+}
+
 div a {
     color: #711d0a;
     background-color: rgb(198 193 193 / 0.6);
