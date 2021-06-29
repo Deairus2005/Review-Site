@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace ReviewsSite.Controllers
 {
@@ -37,24 +39,38 @@ namespace ReviewsSite.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Product model)
+        public IActionResult Create(Product model, IFormFile Image)
         {
-            //Product existingProduct = productRepo.GetByName(model.Name);
+            Product existingProduct = productRepo.GetByName(model.Name);
 
-            //if (existingProduct == null && !String.IsNullOrEmpty(model.Name))
-            //{
-            //    productRepo.Create(model);
+            if (existingProduct == null && !String.IsNullOrEmpty(model.Name))
+            {
+                if(Image != null)
+                {
+                    string path = Directory.GetCurrentDirectory() + "\\wwwroot\\Uploads\\" + Image.FileName;
+                    using (var fileStream = System.IO.File.Create(path))
+                    {
+                        Image.CopyTo(fileStream);
+                    }
+                    model.Image = "/Uploads/" + Image.FileName;
+                }
 
-            //    return RedirectToAction("Index");
-            //}
+                productRepo.Create(model);
 
-            //ViewBag.ResultMessage = "Please Enter A Name That Does Not Already Exist And Is Not Blank.";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.ResultMessage = "Please Enter A Name That Does Not Already Exist And Is Not Blank.";
 
-            //return View(model);
+                return View(model);
+            }
 
-            productRepo.Create(model);
+            
 
-            return RedirectToAction("Index");
+            //productRepo.Create(model);
+
+            //return RedirectToAction("Index");
         }
 
         public IActionResult Update(int id)

@@ -11,8 +11,10 @@ namespace ReviewsSite.Models
         public int Id { get; set; }
 
         [Display(Name = "Product Name")]
-
         public string Name { get; set; }
+        [DataType(DataType.Upload)]
+        [Display(Name = "Product Image")]
+        [Required(ErrorMessage = "Please Choose File To Upload")]
         public string Image { get; set; }
         public string Category { get; set; }
         public virtual List<Review> Reviews { get; set; }
