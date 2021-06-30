@@ -82,8 +82,15 @@ a {
 .checked {color: orange;}
 
 .reviewTable {
-    border-collapse: collapse;
+    
     width: 100%;
+    background-color: white;
+    border: 7px groove seagreen;
+}
+.create-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .reviewTable th {font-weight: bold;}
@@ -95,3 +102,12 @@ a {
     }
 
     .innerTr:nth-child(even){background-color:#dddddd;}
+.add-grid{
+    display: grid;
+}
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
