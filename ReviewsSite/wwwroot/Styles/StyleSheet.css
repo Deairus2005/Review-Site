@@ -102,12 +102,40 @@ a {
     }
 
     .innerTr:nth-child(even){background-color:#dddddd;}
-.add-grid{
-    display: grid;
+
+/*form yuck starts*/
+
+form { 
+    display: flex;
+    flex-direction: column;
+    width: 600px;
 }
+
 .form-group {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding-bottom: 1rem;
+    margin: .4rem;
+    text-align: left;
 }
+
+label {
+    flex: none;
+    width: 100px;
+    padding-right: 20px;
+}
+
+form .form-control {
+    flex: 1 1 auto;
+}
+
+form label {
+    font-size: .9rem;
+    font-weight: bold;
+    margin-bottom: .3rem;
+}
+form input {
+    outline: none;
+    height: 1.5rem;
+}
+
+/*form yuck ends*/

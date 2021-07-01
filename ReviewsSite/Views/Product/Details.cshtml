@@ -11,7 +11,7 @@
 </div>
 <p>Reviews</p>
 <div>
-   
+
     @foreach (var review in Model.Reviews)
     {
         <p>@review.AuthorName</p>
@@ -30,6 +30,6 @@
         }
         <br />
         <p>@review.ReviewContent <button type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></p>
-        <div><a href="/Review/Create/@Model.Id">Create a new review</a></div>
     }
+    <div><a href="/Review/Create/@Model.Id">Create a new review</a></div>
 </div> 

@@ -65,12 +65,6 @@ namespace ReviewsSite.Controllers
 
                 return View(model);
             }
-
-            
-
-            //productRepo.Create(model);
-
-            //return RedirectToAction("Index");
         }
 
         public IActionResult Update(int id)
