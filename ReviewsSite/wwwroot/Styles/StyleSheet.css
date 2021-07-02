@@ -1,0 +1,196 @@
+﻿.background {
+    background-size: 100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #711d0a;
+    text-align: center;
+    margin: 2rem;
+}
+
+h1, h2 a, h3 a {
+    display:inline-block;
+    color: #711d0a;
+    background-color: rgb(198 193 193 / 0.6);
+}
+
+h4 a {
+    color: #711d0a;
+    background-color: rgb(198 193 193 / 0.6);
+}
+
+p {
+    display:inline-block;
+    color: #711d0a;
+    background-color: rgb(198 193 193 / 0.6);
+}
+
+div a {
+    color: #711d0a;
+    background-color: rgb(198 193 193 / 0.6);
+}
+
+h1 a {
+    text-decoration: inherit;
+    color: #711d0a;
+    background-color: rgb(198 193 193 / 0.6);
+}
+
+    h1 a:hover {
+        color: seagreen;
+    }
+
+ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+ul li {
+    float: left;
+    font-size: large;
+}
+
+li a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: inherit;
+    color: #711d0a;
+    background-color: rgb(198 193 193 / 0.89);
+}
+
+a:hover, li a:hover {
+    color: seagreen;
+    font-weight: bold;
+}
+
+.productList {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.productImage{
+    height: 300px;
+    width: 300px;
+}
+
+.checked {color: orange;}
+
+.reviewTable {
+    
+    width: 100%;
+    background-color: white;
+    border: 7px groove seagreen;
+}
+.create-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewTable th {font-weight: bold;}
+
+    .reviewTable td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .innerTr:nth-child(even){background-color:#dddddd;}
+
+/*form yuck starts*/
+
+form { 
+    display: flex;
+    flex-direction: column;
+    width: 295px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin: .4rem;
+    text-align: left;
+    width: 300px;
+}
+
+label {
+    flex: none;
+    width: 100px;
+    padding-right: 20px;
+}
+
+form .form-control {
+    flex: 1 1 auto;
+}
+
+form label {
+    font-size: .9rem;
+    font-weight: bold;
+    margin-bottom: .3rem;
+}
+form input {
+    outline: none;
+    height: 1.5rem;
+}
+
+#button, .button1 {
+    margin: auto;
+    background-color: seagreen;
+    color: white;
+    border: 2px solid #555555;
+    border-radius: 5px;
+}
+
+    #button:hover, .button1:hover {
+        background-color: white;
+        color: seagreen;
+        border-radius: 5px;
+    }
+
+#button2 {
+    background-color: seagreen;
+    color: white;
+    border: 2px solid #555555;
+    border-radius: 5px;
+}
+
+    #button2:hover {
+        background-color: white;
+        color: seagreen;
+        border-radius: 5px;
+    }
+
+.margin {
+    margin: auto;
+}
+
+#padding {
+    padding-bottom: 12px;
+}
+
+#width {
+    width: 75px;
+    margin: auto;
+}
+
+.row {
+    background-color: rgb(198 193 193 / 0.89);
+    width: 301px;
+    margin: auto;
+    font-size: 18px;
+    border-radius: 5px;
+    background: radial-gradient(lightgrey, transparent);
+    padding-bottom: 10px;
+}
+
+.col-sm-2, col-sm-10 {
+    padding-bottom: 10px;
+}
+
+/*form yuck ends*/

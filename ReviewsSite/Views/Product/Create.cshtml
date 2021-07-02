@@ -1,0 +1,45 @@
+﻿@model ReviewsSite.Models.Product
+
+@{
+    ViewData["Title"] = "Create New Product";
+}
+
+<h1>Create New Product</h1>
+
+
+<div class="row">
+    <div class="col-md-4" align="center">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <p>@ViewBag.ResultMessage</p>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                    <label asp-for="Image" class="control-label"></label>
+                    <input type="file" asp-for="Image" class="form-control">
+                    <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <select asp-for="Category" class="form-control" asp-items="@(new SelectList(ViewBag.Products, "Category", "Category"))">
+                    <option disabled selected>--Choose a Category--</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input id="button" type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Products</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

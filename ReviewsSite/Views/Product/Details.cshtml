@@ -1,0 +1,35 @@
+﻿@model ReviewsSite.Models.Product
+
+<h2><a href="/Product/">All Products</a></h2>
+<hr />
+<p>@Model.Name</p>
+<div><img class="productImage" src="@Url.Content(Model.Image)" /></div>
+<p>@Model.Category</p>
+<div>
+    <button id="button2" type="button" onclick="location.href='/Product/Update/@Model.Id'">Edit</button> |
+    <button id="button2" type="button" onclick="location.href='/Product/Delete/@Model.Id'">Delete</button>
+</div>
+<p>Reviews</p>
+<div>
+
+    @foreach (var review in Model.Reviews)
+    {
+        <p>@review.AuthorName</p>
+        <br />
+        @for (int i = 1; i <= 5; i++)
+        {
+            if (i <= @review.Rating)
+            {
+                <div class="fa fa-star checked"></div>
+            }
+            else
+            {
+                <div class="fa fa-star"></div>
+            }
+
+        }
+        <br />
+        <p>@review.ReviewContent <button id="button2" type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button id="button2" type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></p>
+    }
+    <div><a href="/Review/Create/@Model.Id">Create a new review</a></div>
+</div> 
