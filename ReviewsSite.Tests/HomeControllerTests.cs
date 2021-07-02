@@ -9,7 +9,7 @@ using Xunit;
 
 namespace ReviewsSite.Tests
 {
-    public class ProductControllerTests
+    public class HomeControllerTests
     {
         [Fact]
         public void Index_Returns_A_View()

@@ -86,7 +86,7 @@ namespace ReviewsSite.Controllers
             return View(model);
         }
 
-        public IActionResult Delete(int id)
+        public ViewResult Delete(int id)
         {
             Product product = productRepo.GetById(id);
 
