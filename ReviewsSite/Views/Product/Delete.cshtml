@@ -30,9 +30,10 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <button type="button" onclick="location.href='/Product/'">Back to Products</button>
+    <form class="margin" asp-action="Delete">
+        <input  type="hidden" asp-for="Id" />
+        <input class="button1" id="width"  type="submit" value="Delete" class="btn btn-danger" /> 
+        <br />
+        <button class="button1" id="width" type="button" onclick="location.href='/Product/Details/@Model.Id'">Back to Product</button>
     </form>
 </div>

@@ -6,8 +6,8 @@
 <div><img class="productImage" src="@Url.Content(Model.Image)" /></div>
 <p>@Model.Category</p>
 <div>
-    <button type="button" onclick="location.href='/Product/Update/@Model.Id'">Edit</button> |
-    <button type="button" onclick="location.href='/Product/Delete/@Model.Id'">Delete</button>
+    <button id="button2" type="button" onclick="location.href='/Product/Update/@Model.Id'">Edit</button> |
+    <button id="button2" type="button" onclick="location.href='/Product/Delete/@Model.Id'">Delete</button>
 </div>
 <p>Reviews</p>
 <div>
@@ -29,7 +29,7 @@
 
         }
         <br />
-        <p>@review.ReviewContent <button type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></p>
+        <p>@review.ReviewContent <button id="button2" type="button" onclick="location.href='/Review/Update/@review.Id'">Edit</button> | <button id="button2" type="button" onclick="location.href='/Review/Delete/@review.Id'">Delete</button></p>
     }
     <div><a href="/Review/Create/@Model.Id">Create a new review</a></div>
 </div> 
